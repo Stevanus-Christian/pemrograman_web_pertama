@@ -1,0 +1,33 @@
+@keyframes typeIt {
+    0% {
+        width: 0%;
+    }50% {
+        width: 50%;
+    }100% {
+        width: 100%;
+    }
+}
+
+.typing{
+    position: relative;
+    margin-top: 50px;
+}
+.typing-text{
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    white-space: nowrap;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.typing-text::before{
+    content: "Ayo belajar coding";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    color: #000;
+    overflow: hidden;
+    animation: typeIt 5s steps(30) infinite;
+}
